@@ -3,7 +3,10 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: pkoehlers/openscad-build-action@v1.0.2
-    with:
-      input-file: earth.stl
-      output-file: earth.stl
+    runs-on: ubuntu-latest
+    steps:
+    - name: OpenSCAD Build Action
+      uses: pkoehlers/openscad-build-action@v1.0.2
+      with:
+        input-file: 'earth.scad'
+        output-file: 'earth.stl'
