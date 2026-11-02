@@ -3,6 +3,6 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: "Carlmut-Industries/openscad-docker-action@main"
+    uses: Carlmut-Industries/openscad-docker-action@main
     with:
       root_file: earth.stl
