@@ -3,6 +3,7 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: Carlmut-Industries/openscad-docker-action/action.yml@main
+    uses: pkoehlers/openscad-build-action@v1
     with:
-      root_file: earth.stl
+      input-file: earth.stl
+      output-file: earth.stl
