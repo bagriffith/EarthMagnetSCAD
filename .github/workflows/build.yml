@@ -5,8 +5,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
     - name: OpenSCAD Build Action
       uses: pkoehlers/openscad-build-action@v1.0.2
       with:
         input-file: 'earth.scad'
         output-file: 'earth.stl'
+    - name: Upload Artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: earth.stl
+        path: earth.stl
