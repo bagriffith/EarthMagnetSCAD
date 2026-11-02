@@ -3,7 +3,7 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: pkoehlers/openscad-build-action@v1
+    uses: pkoehlers/openscad-build-action@v1.0.2
     with:
       input-file: earth.stl
       output-file: earth.stl
